@@ -12,6 +12,7 @@ This module requires python and these packages.
 python2 and 3 are supported ;)
 
 # Install
+
 '''bash
 pip install numpy mne pyedflib
 pip install git+https://github.com/uesseu/edf2fif
