@@ -13,10 +13,10 @@ python2 and 3 are supported ;)
 
 # Install
 
-'''bash
+```bash
 pip install numpy mne pyedflib
 pip install git+https://github.com/uesseu/edf2fif
-'''
+```
 
 # usage
 You can use it as command line tool and python module.
