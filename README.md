@@ -19,20 +19,20 @@ pip install git+https://github.com/uesseu/edf2fif
 ```
 
 # usage
-You can use it as command line tool and python module.
+You can use it as a command line tool and a python module.
 
-## From Shell
-
+## Shell
+usage
 ```bash
 edf2fif -i input -o output -s settingfile
 ```
 
-If you want help,
+help
 ```
 edf2fif -h
 ```
 
-## From python
+## Python
 
 ```python
 setting_file = 'setting.json'
@@ -44,13 +44,14 @@ e2f.save_fif(outfile)
 ```
 
 ## Setting file
-It needs a setting file because edf files has event list,
-which can be set by users.
+It requires a setting file.
+Because edf files contains list of events, set by users.
 Event list of fif is numeric, and fif file cannot contain
-event list as strings. :(
+event list as list of strings. :(
 
-Setting file is a json file. But not so long.
+Setting file is a json file.
 (I want to write it in toml some day...)
+You need to write them.
 
 event: dict of events  { edf : fif }
 channel_list: channels { edf : fif } 
@@ -66,6 +67,6 @@ montage: name of montage.
 See settings.json ;)
 
 ## Touble Shooting
-If you want to EDF+D fomat, you have to convert it to
-EDF+C fomat.
-For example, EDFbrowser can convert it.
+If you want to use EDF+D fomat, you have to convert it to
+EDF+C fomat before use this script.
+EDFbrowser can convert from EDF+D to EDF+C.
