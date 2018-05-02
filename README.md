@@ -45,37 +45,22 @@ e2f.save_fif(outfile)
 
 ## Setting file
 It requires a setting file.
-
 Because edf files contains list of events, set by users.
-
 Event list of fif is numeric, and fif file cannot contain
-
 event list as list of strings. :(
 
-
 Setting file is a json file.
-
+You need to write them.
 (I want to write it in toml some day...)
 
-You need to write them.
-
-
 event: dict of events  { edf : fif }
-
 channel_list: channels { edf : fif } 
-
 type: types. eeg, eog, meg, ecg, stim, misc and so on.
-
 　　　　If you want to know details, read MNE python's API.
-
 reference: reference of eeg. If None, averaged reference.
-
 　　　　If multiple channels were selected, mean of them are used.
-
 exclude: List of channels to drop.
-
 montage: name of montage.
-
 　　　　If you want to know details, read MNE python's API.
 
 ## Example of Setting file
@@ -83,7 +68,5 @@ See settings.json ;)
 
 ## Touble Shooting
 If you want to use EDF+D fomat, you have to convert it to
-
 EDF+C fomat before use this script.
-
 EDFbrowser can convert from EDF+D to EDF+C.
