@@ -97,13 +97,15 @@ class EDF2FIF():
             # 頭文字が+じゃないならイベント情報。さっさととばす。
             while self.count_edf < self.edf_length:
                 # countでedf側のeventを数える
-                if self.edf_events[self.count_edf][0] == '+':
+                if len(self.edf_events[self.count_edf]) == 0:
+                    # 例外的に0文字の場合もあるので、この時はカウント
+                    self.count_edf = self.count_edf + 1
+                elif self.edf_events[self.count_edf][0] == '+':
                     # 頭文字が+の場合はイベント情報なのでとばす
                     break
-                elif len(self.edf_events[self.count_edf]) == 0:
-                    # 0文字の場合もあるので、この時もとばす
-                    break
-                self.count_edf = self.count_edf + 1
+                else:
+                    # +ではないので飛ばす
+                    self.count_edf = self.count_edf + 1
             return True
 
     def extract_event(self):
