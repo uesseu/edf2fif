@@ -1,0 +1,30 @@
+{
+"event":{"PHOTO 3Hz":1, "PHOTO 6Hz":2, "PHOTO 9Hz":3, "PHOTO 12Hz":4,
+   "PHOTO 15Hz":5, "PHOTO 18Hz":6, "PHOTO 21 Hz":7,
+    "HV START": 8, "HV END":9, "POST HV 02:00":10,
+  "開眼":11,"閉眼":12} ,
+"channel_list":{
+    "EEG Fp1-Ref": "Fp1", "EEG Fp2-Ref": "Fp2",
+    "EEG F3-Ref": "F3", "EEG F4-Ref": "F4",
+    "EEG C3-Ref": "C3", "EEG C4-Ref": "C4",
+    "EEG P3-Ref": "P3", "EEG P4-Ref": "P4",
+    "EEG O1-Ref": "O1", "EEG O2-Ref": "O2",
+    "EEG F7-Ref": "F7", "EEG F8-Ref": "F8",
+    "EEG T3-Ref": "T3", "EEG T4-Ref": "T4",
+    "EEG T5-Ref": "T5", "EEG T6-Ref": "T6",
+    "EEG Fz-Ref": "Fz", "EEG Cz-Ref": "Cz",
+    "EEG Pz-Ref": "Pz","EEG A1-Ref":"A1",
+    "EEG A2-Ref":"A2", "POL X1":"X1","POL X2":"X2",
+    "POL X3":"ECG"},
+"type":{"X1":"eog","X2":"eog"},
+"type_all":"eeg",
+"reference":[],
+    "exclude":[
+    "POL E",   "POL PG1",
+    "POL PG2", "POL T1", "POL T2",  "POL X4",  "POL X5",
+    "POL X6",  "POL X7",    "POL X8",  "POL X9",
+    "POL X10", "POL X11","POL $A1",
+    "POL $A2"
+    ],
+    "montage":"standard_alphabetic"
+}
